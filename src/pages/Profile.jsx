@@ -3,53 +3,53 @@ import { FaWallet, FaArrowCircleUp, FaUniversity, FaLock, FaDownload, FaTelegram
 
 const Profile = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white rounded-lg overflow-hidden shadow-md w-full ">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div className="w-full max-w-lg bg-white rounded-lg overflow-hidden shadow-md">
 
         {/* Wallet Balance */}
-        <div className="p-6 bg-teal-500 text-white text-center">
-          <h3 className="text-lg font-semibold mb-2">Wallet Balance</h3>
-          <p className="text-3xl font-bold">$500.00</p>
+        <div className="p-6 bg-gradient-to-tr from-[#1f1a91] to-[#cb717b] text-white text-center rounded-t-lg">
+          <h3 className="text-2xl md:text-5xl font-semibold mb-2">Wallet Balance</h3>
+          <p className="text-xl md:text-3xl font-bold">$500.00</p>
         </div>
 
         {/* Recharge Button */}
         <div className="p-6 text-center">
-          <Link to="/recharge" className="bg-red-500 text-white p-3 rounded w-full block text-center hover:bg-green-600">
+          <Link to="/recharge" className="bg-green-500 text-white p-3 rounded w-full block text-center hover:bg-green-600">
             <FaArrowCircleUp className="inline-block mr-2" />
             Recharge
           </Link>
         </div>
 
         {/* Wallet Menu */}
-        <div className="p-6 bg-gray-200 text-black">
-          <h3 className="text-lg font-semibold mb-4 text-center">Wallet Menu</h3>
+        <div className="p-6 bg-gray-200">
+          <h3 className="text-lg font-semibold mb-4 text-center text-gray-800">Wallet Menu</h3>
           <ul className="space-y-2">
-            <li className="flex items-center justify-between p-3 bg-white rounded">
-              <FaWallet className="inline-block mr-2" />
+            <button className="flex min-w-full items-center p-3 bg-white rounded">
+              <FaWallet className="inline-block mr-2 text-gray-600" />
               Commission Fee: 2%
-            </li>
-            <li className="flex items-center justify-between p-3 bg-white rounded">
-              <FaWallet className="inline-block mr-2" />
+            </button>
+            <button className="flex min-w-full items-center p-3 bg-white rounded">
+              <FaWallet className="inline-block mr-2 text-gray-600" />
               Signup Bonus: $10.00
-            </li>
-            <li className="flex items-center justify-between p-3 bg-white rounded">
-              <FaWallet className="inline-block mr-2" />
+            </button>
+            <button className="flex min-w-full items-center p-3 bg-white rounded">
+              <FaWallet className="inline-block mr-2 text-gray-600" />
               Interest: 5%
-            </li>
-            <li className="flex items-center justify-between p-3 bg-white rounded">
-              <FaWallet className="inline-block mr-2" />
+            </button>
+            <button className="flex min-w-full items-center p-3 bg-white rounded">
+              <FaWallet className="inline-block mr-2 text-gray-600" />
               Promotion: $5.00
-            </li>
-            <li className="flex items-center justify-between p-3 bg-white rounded">
+            </button>
+            <button className="flex min-w-full items-center p-3 bg-gradient-to-l from-lime-600 to-teal-500 rounded">
               <FaWallet className="inline-block mr-2" />
               Gift Lifafa: $2.00
-            </li>
+            </button>
           </ul>
         </div>
 
         {/* Wallet Options */}
-        <div className="p-6 bg-gray-200 text-black">
-          <h3 className="text-lg font-semibold mb-4 text-center">Wallet Options</h3>
+        <div className="p-6 bg-gray-200">
+          <h3 className="text-lg font-semibold mb-4 text-center text-gray-800">Wallet Options</h3>
           <ul className="space-y-2">
             <li className="flex items-center justify-between p-3 bg-white rounded hover:bg-gray-300">
               <Link to="/recharge">
@@ -85,8 +85,8 @@ const Profile = () => {
         </div>
 
         {/* Other Options */}
-        <div className="p-6 bg-gray-200 text-black">
-          <h3 className="text-lg font-semibold mb-4 text-center">Other Options</h3>
+        <div className="p-6 bg-gray-200">
+          <h3 className="text-lg font-semibold mb-4 text-center text-gray-800">Other Options</h3>
           <ul className="space-y-2">
             <li className="flex items-center justify-between p-3 bg-white rounded hover:bg-gray-300">
               <Link to="/download-app">

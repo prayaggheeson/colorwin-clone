@@ -64,7 +64,7 @@ useEffect(() => {
           },
           {
             id: 6,
-            image: 'https://placekitten.com/300/205',
+            image: 'https://placekitten.com/300/206',
             title: 'Product 6',
             description: 'Description for Product 3',
             price: 49.99,
