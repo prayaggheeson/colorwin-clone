@@ -1,23 +1,19 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 
 const CountdownTimer = () => {
-  const initialTime = localStorage.getItem("countdownTimer") || 180; 
-  const [timeLeft, setTimeLeft] = useState(parseInt(initialTime, 10));
+  const [timeLeft, setTimeLeft] = useState(180); // 3 minutes in seconds
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
     }, 1000);
 
-    
+    // Clear the interval when the component is unmounted
     return () => clearInterval(timer);
   }, []);
 
   useEffect(() => {
-    // Save the current timer value to localStorage
-    localStorage.setItem("countdownTimer", timeLeft.toString());
-
-    
+    // Check if the time is up
     if (timeLeft === 0) {
       // Reload the page after 3 minutes
       window.location.reload();
@@ -31,12 +27,9 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md">
-      <h1 className="text-3xl font-semibold mb-4">Countdown Timer</h1>
-      <div className="button-85 text-4xl font-bold mb-6 text-center">
-        {formatTime(timeLeft)}
-      </div>
-    </div>
+    <span className="button-85 text-4xl font-semibold m-6 cursor-not-allowed text-center">
+      {formatTime(timeLeft)}
+    </span>
   );
 };
 
