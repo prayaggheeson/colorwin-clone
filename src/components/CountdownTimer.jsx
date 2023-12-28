@@ -27,7 +27,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <span className="button-85 text-4xl font-semibold m-6 cursor-not-allowed text-center">
+    <span className="button-85 text-xl font-semibold m-6 cursor-not-allowed text-center">
       {formatTime(timeLeft)}
     </span>
   );

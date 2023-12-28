@@ -5,6 +5,7 @@ import RegisterPage from "./pages/Register";
 import ChangePasswordPage from "./pages/ChangePassword";
 import LeaderBoard from "./pages/LeaderBoard";
 import Profile from "./pages/Profile";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/leaderboard/:id" element={<LeaderBoard />} />
         <Route path="/profile/" element={<Profile />} />
         <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/search" element={<Search />} />
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
     </>

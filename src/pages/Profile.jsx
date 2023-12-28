@@ -14,7 +14,7 @@ const Profile = () => {
 
         {/* Recharge Button */}
         <div className="p-6 text-center">
-          <Link to="/recharge" className="bg-green-500 text-white p-3 rounded w-full block text-center hover:bg-green-600">
+          <Link to="/recharge" className="bg-green-500 text-white p-3 rounded w-full block text-center hover:bg-green-600 hover:shadow-xl hover:shadow-green-900 transition-all duration-700">
             <FaArrowCircleUp className="inline-block mr-2" />
             Recharge
           </Link>
@@ -111,7 +111,7 @@ const Profile = () => {
 
         {/* Logout Button */}
         <div className="p-6">
-          <button className="bg-red-500 text-white p-3 rounded w-full block text-center hover:bg-red-600">
+          <button className="bg-red-500 text-white p-3 rounded w-full block text-center hover:bg-red-600  hover:shadow-xl hover:shadow-red-900 transition-all duration-700">
             <FaSignOutAlt className="inline-block mr-2" />
             Logout
           </button>

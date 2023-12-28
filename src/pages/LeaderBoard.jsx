@@ -1,8 +1,10 @@
+import SelectGame from "../components/SelectGame";
+import CountdownTimer from "../components/CountdownTimer"
 const LeaderBoard = () => {
   const bonusBalance = localStorage.getItem("bonusBalance");
   const walletbalance = localStorage.getItem("walletbalance");
   const periodTime = localStorage.getItem("periodTime");
-  const countDownhere = localStorage.getItem("countDownhere");
+
 
   return (
     <>
@@ -29,22 +31,22 @@ const LeaderBoard = () => {
           </button>
         </div>
       </div>
+      {/* numberbuttons */}
       <div className="bg-slate-200 p-8 text-black">
         <h3 className="text-xl md:text-3xl mb-4">Period Time: {periodTime}</h3>
-        <h3 className="text-xl md:text-3xl mb-4">CountDown: {countDownhere}</h3>
-        <div className="bg-white rounded-lg p-4 mb-4 space-y-2">
-          <div className="flex justify-around">
-            <button className="bg-green-500  hover:shadow-xl hover:shadow-green-900 transition-all duration-300 hover:bg-green-600 text-white px-20 py-3 rounded">
-              Join Green
-            </button>
-            <button className="bg-red-500  hover:shadow-xl hover:shadow-red-900 transition-all duration-300 hover:bg-red-600 text-white px-20 py-3 rounded">
-              Join Red
-            </button>
-            <button className="bg-violet-500 hover:shadow-xl hover:shadow-violet-900 transition-all duration-300 hover:bg-violet-600 text-white px-20 py-3 rounded">
-              Join Violet
-            </button>
-          </div>
+        <h3 className="text-xl md:text-3xl mb-4">CountDown:<CountdownTimer/> </h3>
+        <div className="bg-white rounded-lg p-4 mb-4 space-y-2 md:space-y-0 md:flex md:justify-around">
+          <button className="bg-green-500 hover:shadow-xl hover:shadow-green-900 transition-all duration-300 hover:bg-green-600 text-white px-6 md:px-20 py-3 md:py-3 rounded w-full md:w-auto mb-2 md:mb-0">
+            Join Green
+          </button>
+          <button className="bg-red-500 hover:shadow-xl hover:shadow-red-900 transition-all duration-300 hover:bg-red-600 text-white px-6 md:px-20 py-3 md:py-3 rounded w-full md:w-auto mb-2 md:mb-0">
+            Join Red
+          </button>
+          <button className="bg-violet-500 hover:shadow-xl hover:shadow-violet-900 transition-all duration-300 hover:bg-violet-600 text-white px-6 md:px-20 py-3 md:py-3 rounded w-full md:w-auto">
+            Join Violet
+          </button>
         </div>
+
         {/* numberbuttons */}
         <div className="grid md:mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
           <button className="bg-gradient-to-bl from-violet-500 to-red-500  hover:shadow-xl hover:shadow-violet-900 transition-all duration-300 text-white px-6 py-3 rounded">
@@ -78,6 +80,10 @@ const LeaderBoard = () => {
             9
           </button>
         </div>
+      </div>
+      {/* Games component */}
+      <div className="bg-slate-200 p-8 text-black">
+        <SelectGame />
       </div>
     </>
   );
