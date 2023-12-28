@@ -1,13 +1,15 @@
 import Navbar from "./components/Navbar.jsx";
 import BottomMenu from "./components/BottomMenu.jsx";
+import { Outlet } from "react-router-dom";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
+    
       <Navbar />
-      <main className="flex-grow">{children}</main>
+      <Outlet />
       <BottomMenu />
-    </div>
+    </>
   );
 };
 

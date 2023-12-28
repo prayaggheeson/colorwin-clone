@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 768px) {
+  .button-85 {
+    padding: 0.4em 1em;
+    font-size: 0.8rem;
+  }
+}
+
 
 .button-85 {
   padding: 0.6em 2em;
@@ -16,6 +23,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  transition: all 0.3s ease-in-out;
 }
 
 .button-85:before {
@@ -69,4 +77,15 @@
   top: 0;
   border-radius: 10px;
 }
-  
+
+@media (max-width: 768px) {
+  .button-85 {
+    padding: 0.4em 1em;
+    font-size: 0.8rem;
+  }
+
+  .button-85:before {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+  }
+}
