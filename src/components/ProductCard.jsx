@@ -80,9 +80,9 @@ useEffect(() => {
 }, [hasFetchedData]);
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="grid grid-cols-2 justify-center">
       {productData.map((product) => (
-        <div key={product.id} className="max-w-xl m-4 overflow-hidden shadow-lg rounded-lg md:w-1/3 sm:w-1/2">
+        <div key={product.id} className="max-w-xl m-4 overflow-hidden shadow-lg rounded-lg ">
           <img className="w-full h-60 object-cover" src={product.image} alt={product.title} />
 
           <div className="p-4">

@@ -7,6 +7,7 @@ import LeaderBoard from "./pages/LeaderBoard";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Layout from "./Layout";
+import Recharge from "./pages/Recharge";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/profile/" element={<Profile />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/recharge" element={<Recharge />} />
         </Route>
         
         <Route path="/login" element={<Login />} />
