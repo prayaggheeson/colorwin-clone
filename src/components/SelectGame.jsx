@@ -32,7 +32,7 @@ const SelectGame = () => {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-3 md:gap-6 items-center justify-center py-4 md:py-8 space-x-3">
+      <div className="grid grid-flow-col gap-3 md:gap-6 items-center justify-center py-4 md:py-8 space-x-3">
         {categories.map((category) => (
           <button
             key={category}
